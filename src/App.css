@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+  background-color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 부모 */
+.first_container{
+  width:100%;
+  height:100%;
+  display:flex;
+  text-align: center;
+  line-height: 100vh;
+  color:#fff;
+  font-size:3em;
+  font-weight: bold;
+  cursor: pointer;
+}
+a{
+  display:block;
+  text-decoration: none;
+}
+/* 브랜드영역 */
+.brand{
+  width:50vw;
+  height:100vh;
+  background-image: url(/src/img/greekhada.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.brand::before{
+  content:'브랜드 소개';
+  position:relative;
+  z-index: 99;
+  color:#fff;
+}
+.brand::after{
+  content:'';
+  width: 50vw;
+  height:100vh;
+  opacity: 0.5;
+  background-color: rgb(0, 0, 0);
+  position:absolute;
+  top:0;
+  left:0;
+  transition: all 0.5s;
+}
+/* 프렌차이즈 영역*/
+.franchise{
+  width:50vw;
+  height:100vh;
+  background-image: url(/src/img/greekhadait.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.franchise::before{
+  content:'가맹문의';
+  position:relative;
+  z-index: 99;
+  color:#fff;
+}
+.franchise::after{
+  content:'';
+  width: 50vw;
+  height:100vh;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  position:absolute;
+  top:0;
+  right:0;
+  transition: all 0.5s;
+}
+/* 호버 영역*/
+.franchise:hover::after,.brand:hover::after{
+  background-color:#fff;
+  }
+  .franchise:hover::before,.brand:hover::before{
+    color:#000;
+    }
+
+/* 헤더영역 */
+
+ul,li{list-style: none; margin:0; padding:0;}
+
+.header_container{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  border-bottom:1px solid black;
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px -4px black;
+  background-color:#fff;;
+  z-index: 99;
+}
+.container{
+  width:75%;
+  margin:0 auto;
+  position: relative;
+}
+.header_container .container{
+  padding:10px;
+  box-sizing: border-box;
+}
+.logo{
+  width:8%;
+  float:left;
+  text-align: left;
+}
+.logo img{
+  width:100%;
+  float:left;
+}
+
+.menu{
+  width:90%;
+  float:right;
+  font-weight: 700;
+  display:flex;
+  justify-content: space-between;
+
+}
+.lnb{
+  width:50%;
+  display:flex;
+  justify-content: space-between;
+  float:right;
+  position:relative;
+  text-align: center;
+  font-weight: 700;
+}
+.lnb>li:hover{
+  color:green;
+}
+.lnb li,.gnb li{
+  cursor: pointer;
+  position:relative;
+  transition:all 0.1s;
+}
+.gnb{
+  width:16%;
+  display:flex;
+  justify-content: space-between;
+  position:relative;
+  text-align: center;
+}
+.gnb li{
+  width:20px;
+  height:20px;
+}
+.gnb li:last-child{
+  width:100px;
+  background-color:green;
+  color:#fff;
+  border-radius: 20px;
+}
+.gnb li:first-child{
+  background-image:url(./img/facebook.png);
+  background-repeat: no-repeat;
+  background-size:contain
+}
+.gnb li:nth-child(2){
+  background-image:url(./img/insta.png);
+  background-repeat: no-repeat;
+  background-size:contain
+}
+.gnb li:nth-child(3){
+  background-image:url(./img/naver.png);
+  background-repeat: no-repeat;
+  background-size:contain
+}
+.gnb li:nth-child(4){
+  background-image:url(./img/naver.png);
+  background-repeat: no-repeat;
+  background-size:contain
+}
+
+.hidden_menu{
+  /* display:none; */
+  text-align: center;
+  margin-top:20px;
+  background-color:rgb(255, 255, 255);
+  color:#000;
+  overflow:hidden;
+  height:0;
+  transition:all 0.5s;
+  font-weight: 500;
+}
+.hidden_menu li{
+  margin-top:5px;
+}
+.lnb:hover .hidden_menu{
+  height:180px;
+}
+.hidden_menu li:hover{
+  color:green;
+}
+.TextBox{
+  width:60%;
+  padding:200px;
+  box-sizing: border-box;
+  background: linear-gradient( to right, rgba(0, 128, 0, 0.612), rgba(0, 128, 0, 0));
+  color:#fff;
+  
+}
+
+.TextBox h2{
+  width:60%;
+  font-size:60px;
+}
+.TextBox p{
+  font-size:20px;
+  font-weight: 900;
+  position:relative;
+  top:-30px;
+}
+/* 세션2 */
+
+.section02_container,.section03_container,.section04_container,.footer_container{
+  width:75%;
+  margin: 0 auto;
+  position:relative;
+  margin-top:50px;
+}
+.menu_name{
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  font-size:20px;
+  cursor: pointer;
+  font-weight: 100;
+}
+.product_all{
+  width:50%;
+}
+.product_all p{
+  display:block;
+  margin:0;
+  float:right;
+}
+
+.is-active{
+  color:green;
+  font-weight:900;
+}
+
+.menu01{
+  width:100%;
+  height:598px;
+  overflow: hidden;
+  float:left;
+}
+
+.menu_box{
+  width:255px;
+  height:264px;
+  color:#fff;
+  float:left;
+  margin-right:26.8px;
+  margin-top:26.8px;
+  overflow: hidden;
+  transition:all 0.3s;
+  position:relative;
+  cursor: pointer;
+}
+.menu_box img{
+  height:90%;
+  display: block;
+  margin:10px auto;
+  transition:all 0.3s;
+}
+
+.menu_box:hover .menu_box_img{
+  transform: scale(1.1);
+  background-color: green;
+}
+.menu_box_box{
+  width:100%;
+  position:absolute;
+  top:-10%;
+  transform: translateY(-50%);
+  left:0;
+  text-align: center;
+  font-size:30px;
+  padding-left:5px;
+  box-sizing: border-box;
+  display:block;
+  margin-top:245px;
+  transition:all 0.3s;
+  font-weight: 900;
+  color:#fff;
+  opacity: 0;
+}
+
+.menu_box:hover .menu_box_box{
+  opacity: 1;
+}
+.menu_container{
+  width:100%;
+  height:580px;
+  position:relative;
+}
+
+.menu_box:nth-child(5),.menu_box:nth-child(10){
+  margin-right:0;
+}
+.main_menu_nv{width:1000px; margin:0 auto; display:flex; justify-content: space-between;}
+.main_menu{
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-wrap: wrap;
+}
+.main_menu_nv div{
+  width:20%;
+  height:95px;
+  text-align: center;
+  line-height: 95px;
+  float:left;
+  background-color:green;
+  margin:10px;
+  transition:all 0.5s;
+}
+.main_menu_nv div:hover{
+  color:#fff;
+  font-size:1.5em;
+  font-weight: 900;
+}
+.is-active2{
+  color:#fff;
+  font-weight: 900;
+  font-size:1.5em;
+}
+.is-active3{
+ display:block;
+}
+.is-active4{
+  display:none;
+ }
+
+ .con{
+  display:flex;
+  width:20%;
+  margin:0 auto;
+  background-color: aquamarine;
+  text-align: center;
+ }
+ .kcal,.allergy{
+  width:40%;
+  background-color: beige;
+  margin:0 auto;
+ }
+.yogurt_name{
+  width:100%
+}
+.yogurt_name > select{
+  width:100%;
+  height:30px;
+}
+ .topping_name{
+  /* display:flex; */
+  height:1000px;
+ }
+ .topping_name > label{
+  width:150px;
+  height:130px;
+  float:left;
+  margin:4px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+ }
+
+ .topping_name>label>input{
+  width:100%;
+  height:100%;
+  opacity:0;
+  position:relative;
+  top:-133%;
+  cursor: pointer;
+ }
+
+ .topping_pick{
+  background-color:green;
+ }
+
+ .franchiseImage{
+  width:100%;
+  height:1100px;
+  background-image: url(../src/img/greekhada-franchise00.jpg);
+  background-size:100%;
+  background-repeat: no-repeat;
+ }
+ 
+ .list-line{
+ }
+
+ .list-item{
+  display:flex;
+  justify-content: space-between;
+ }
+
+ .thead{
+  padding:15px 10px;
+  box-sizing: border-box;
+  border-radius: 20px 20px 0 0;
+  background-color:lightgray;
+ }
+
+ .tbody{
+  padding:15px 10px;
+  border-bottom: 1px solid black;
+ }
+
+ .kcal_plus{
+  width:100%;
+  height:250px;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  border:1px lightgray solid;
+  border-radius: 20px;
+  overflow-y: scroll;
+ }
+
+ .kcal_name{
+  width:100%;
+ }
+ .kcal_name>span{
+  width:100%;
+  display:block;
+  border-bottom: 1px lightgray solid;
+ }
+
+ .plus-yogurt>p,.plus-topping>p{
+  border-bottom: 1px lightgray solid;
+ }
+
+ .inquiry_received{
+  font-size:30px;
+ }
+
+ .spanspanspan{
+  font-weight: 700;
+ }
+
+ .FAQ_box{
+  width: 100%;
+  border-radius: 10px;
+  background-color:aquamarine;
+  padding:40px 20px;
+  margin-top:20px;
+  display:flex;
+  justify-content: space-between;
+  cursor:pointer;
+ }
+
+ .spanspan{
+  font-weight: 900;
+  font-size:24px;
+ }
+
+ .spanspanspanspan{
+  font-weight: 700;
+  font-size:20px;
+ }
+
+ .asfaf{
+  text-align: center;
+ }
+
+ .asdasda{
+  width:30px;
+  height:30px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+  background-color: aquamarine;
+ }
+
+ .FAQ{
+  width:100%;
+  background-color: antiquewhite;
+ }
+
+ .FAQ>li{
+  width:100%;
+  height:50px;
+  overflow: hidden;
+  background-color: aqua;
+  transition:all 1s;
+  cursor: pointer;
+ }
+
+ .FAQ>li:hover{
+  height:200px;
+ }
+
+ .con_wrap{
+  width:100%;
+  height:1400px;
+  background-color: antiquewhite;
+ }
+
+ .con-box{
+  width:32.8%;
+  height:460px;
+  background-color: aqua;
+  float:left;
+  margin-right:10px;
+  margin-bottom:10px;
+ }
+
+ .con-box:nth-child(3),.con-box:nth-child(6),.con-box:nth-child(9){
+  margin-right:0
+ }
+ .container00{
+  width:100%;
+  height:120px;
+  margin-top:50px;
+  margin-bottom:50px;
+  background-color:green;
+  color:#fff
+ }
+ .NameText{
+  width:1440px;
+  margin: 0 auto;
+  position:relative;
+  top:30px;
+ }
+
+ .NameText p{
+  width:100%;
+  height:10px;
+  font-size:20px;
+  float:left;
+ }
+ .NameText p span{
+  font-weight: 800;
+ }
+ .NameText h2{
+  font-size:30px;
+ }
+ .b-i_images{
+  width:50%;
+  height:300px;
+  margin: 0 auto;
+  display:flex;
+  justify-content: space-between;
+ }
+ .bi-logo{
+  width:300px;
+  height:300px;
+  background-color: aqua;
+ }
+ .b-i_texts{
+  width:50%;
+  margin: 0 auto;
+  text-align: center;
+ }
+ .topping_wrap001{
+  background-color: blanchedalmond;
+  height:20px;
+  float:left;
+  display:flex;
+  margin: 5px 5px;
+  padding:10px 15px;
+  position:relative;
+  border-radius: 5px;
+ }
+
+ .topping_name001{
+  height:20px;
+  position:relative;
+  top:50%;
+  left:50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+ }
+ .topping_remove001{
+  position:absolute;
+  font-size:5px;
+  top:20%;
+  right:0;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+ }
+
+ .topping_total{
+  width: 100%;
+  background-color: bisque;
+  margin-top:10px;
+ }
+
